@@ -1,4 +1,5 @@
 package com.loan.loan.service;
+
 import com.loan.loan.entity.Loan;
 import com.loan.loan.repository.LoanRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,22 +17,26 @@ public class LoanServiceImpl implements LoanService {
 
     @Override
     public Loan saveLoan(Loan loan) {
-        return  loanRepository.save(loan);
+        return loanRepository.save(loan);
+    }
+
+    public Loan updateLoan(Loan loan) {
+        return loanRepository.save(loan);
     }
 
     @Override
-    public Loan deleteSoft(Long id) {
-        Loan loan = loanRepository.findById(id).orElseThrow( ()-> new IllegalArgumentException());
-        if(null != loan){
+    public Loan delete(Long id) {
+        Loan loan = loanRepository.findById(id).orElseThrow(IllegalArgumentException::new);
+        if (null != loan) {
             loan.setDeleted(true);
             loanRepository.save(loan);
         }
-        return  loan;
+        return loan;
     }
 
     @Override
-    public Optional<Loan> findById(Long Id) {
-        return loanRepository.findByLoanId(Id);
+    public Optional<Loan> findById(Long id) {
+        return loanRepository.findByLoanId(id);
     }
 
     @Override

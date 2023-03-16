@@ -11,5 +11,5 @@ public interface LoanRepository extends MongoRepository<Loan,Long> {
 
     List<Loan> findByIsDeleted(boolean value);
 
-    Optional<Loan> findByLoanId(Long Id);
+    Optional<Loan> findByLoanId(Long id);
 }

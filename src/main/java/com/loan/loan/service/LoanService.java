@@ -1,16 +1,15 @@
 package com.loan.loan.service;
-
 import com.loan.loan.entity.Loan;
-
 import java.util.List;
 import java.util.Optional;
 
 public interface LoanService {
 
-    public Loan saveLoan(Loan loan);
-    public Loan deleteSoft(Long id);
+    Loan saveLoan(Loan loan);
+    Loan updateLoan(Loan loan);
+    Loan delete(Long id);
 
-    abstract Optional<Loan> findById(Long Id);
+    Optional<Loan> findById(Long id);
 
-    public List<Loan> findAll();
+    List<Loan> findAll();
 }
