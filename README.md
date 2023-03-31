@@ -13,7 +13,7 @@ For updating a loan:-
 Put method followed by http://localhost:8080/loans/id
 
 For deleting a loan:-
-Delete method followed by http://localhost:8080/delete/Id
+Delete method followed by http://localhost:8080/loans/id
 
 For getting all the loans:-
 Get method followed by http://localhost:8080/loans
