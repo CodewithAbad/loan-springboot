@@ -7,10 +7,10 @@ any data using the rest endpoint or website then it will show the user as delete
 Here I'm mentioning the rest endpoints details for reference:-
 
 For Creating a loan:-
-Post method followed by http://localhost:8080/create
+Post method followed by http://localhost:8080/loans
 
 For updating a loan:-
-Put method followed by http://localhost:8080/update
+Put method followed by http://localhost:8080/loans/id
 
 For deleting a loan:-
 Delete method followed by http://localhost:8080/delete/Id
